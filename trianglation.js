@@ -13,7 +13,7 @@ class Vertex {
     }
 }
 
-class Mesh{
+class Polygon{
     constructor(){
         this.Vertices = [];
     }
