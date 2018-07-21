@@ -18,8 +18,8 @@ function setup() {
 function draw() {
     background(41, 47, 54);
 
-    drawPoints();
     drawOuterEdges();
+    drawPoints();
 }
 
 function getCenterPosition(point) {
