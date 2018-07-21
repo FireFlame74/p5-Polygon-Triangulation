@@ -23,20 +23,22 @@ class Polygon{
 
         let oldVertex = new Vertex([points[0].x, points[0].y]);
         
-
         for (let index = 1; index < points.length; index++) {
             const element = points[index];
 
             let vertex = new Vertex([element.x,element.y]);
-            console.log(vertex);
+            
             oldVertex.Connections.push(vertex);
             vertex.Connections.push(oldVertex);
+
+
             if(index==1){
                 this.Vertices.push(oldVertex);
             }
             if(index==points.length-1){
                 this.Vertices[0].Connections.push(vertex);
             }
+
             oldVertex = vertex;
             this.Vertices.push(vertex);
         }
