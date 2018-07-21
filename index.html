@@ -4,9 +4,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
     <script src="trianglation.js"></script>
     <script src="sketch.js"></script>
+
+    <script>
+        function test(){
+            console.log(points);
+            console.log(new Polygon().pointChainToVertices(points));
+        }
+    </script>
 </head>
 
 <body style="margin: 0">
+    <button onclick="test()"></button>
 </body>
 
 </html>
