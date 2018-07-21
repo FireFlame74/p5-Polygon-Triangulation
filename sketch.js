@@ -17,4 +17,16 @@ function setup() {
 
 function draw() {
     background(41, 47, 54);
+
+    drawPoints();
+}
+
+function drawPoints() {
+    for (let index = 0; index < points.length; index++) {
+        const point = points[index];
+
+        noStroke();
+        fill(255, 255, 255);
+        ellipse(point.x * scale + window.innerWidth / 2, -point.y * scale + window.innerHeight / 2, 10, 10);
+    }
 }
