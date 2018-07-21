@@ -17,4 +17,8 @@ class Mesh{
     constructor(){
         this.Vertices = [];
     }
+    constructor(vertices){
+        this.Vertices = vertices;
+    }
+
 }
