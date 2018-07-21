@@ -29,6 +29,9 @@ function drawPoints() {
 
         noStroke();
         fill(255, 255, 255);
-        ellipse(point.x * scale + window.innerWidth / 2, -point.y * scale + window.innerHeight / 2, 10, 10);
+        let position = createVector(point.x * scale + window.innerWidth / 2, point.y * scale + window.innerHeight / 2);
+        ellipse(position.x, position.y, 10, 10);
+        textSize(14);
+        text(index, position.x + 10, position.y - 10);
     }
 }
