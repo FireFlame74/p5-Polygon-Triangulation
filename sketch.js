@@ -19,6 +19,9 @@ function draw() {
     background(41, 47, 54);
 
     drawPoints();
+    drawOuterEdges();
+}
+
 function getCenterPosition(point) {
     return createVector(point.x * scale + window.innerWidth / 2, point.y * scale + window.innerHeight / 2);
 }
@@ -33,5 +36,21 @@ function drawPoints() {
         ellipse(position.x, position.y, 10, 10);
         textSize(14);
         text(index, position.x + 10, position.y - 10);
+    }
+}
+
+function drawOuterEdges() {
+    for (let index = 0; index < points.length; index++) {
+        const current = points[index];
+        let next = points[index + 1];
+        if (index == points.length-1)
+            next = points[0];
+
+        stroke(255);
+        let currentPosition = getCenterPosition(current);
+        let nextPosition = getCenterPosition(next);
+
+        line(currentPosition.x, currentPosition.y, nextPosition.x, nextPosition.y);
+
     }
 }
