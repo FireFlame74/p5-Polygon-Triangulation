@@ -33,9 +33,16 @@ function drawPoints() {
         noStroke();
         fill(255, 255, 255);
         let position = getCenterPosition(point);
-        ellipse(position.x, position.y, 10, 10);
+        ellipse(position.x, position.y, 15, 15);
+
+        fill(0);
         textSize(14);
-        text(index, position.x + 10, position.y - 10);
+        textAlign(CENTER, CENTER);
+        text(index, position.x - textWidth(index)/2 - 4, position.y - 10, 20, 20);
+
+        
+
+
     }
 }
 
