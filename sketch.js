@@ -6,6 +6,8 @@ function setup() {
         createVector(0, 1),
         createVector(1, 0),
         createVector(0, -1),
+        createVector(1, 0),
+        createVector(0, 1),
         createVector(-1, 0)
     ];
 
