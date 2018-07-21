@@ -44,7 +44,6 @@ class Polygon{
         }
 
         this.Vertices[this.Vertices.length-1].Connections.push([points[0].x,points[0].y]);
-        return this;
     }
 
 }
