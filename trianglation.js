@@ -46,5 +46,14 @@ class Polygon{
         this.Vertices[this.Vertices.length-1].Connections.push([points[0].x,points[0].y]);
     }
 
+    sortVerticesVertically(){
+
+        this.Vertices.sort(function (a, b) {
+            return a.y - b.y;
+        });
+
+        return this.Vertices;
+    }
+
 }
 

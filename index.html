@@ -8,7 +8,11 @@
     <script>
         function test(){
             console.log(points);
-            console.log(new Polygon().pointChainToVertices(points));
+            let polygon = new Polygon();
+            console.log(polygon.pointChainToVertices(points));
+            console.log(polygon.sortVerticesVertically());
+            
+
         }
     </script>
 </head>
